@@ -6,6 +6,7 @@
         "type": "git",
         "url": "https://bitbucket.org/karelbraeckman/rpi-explorerhat.git"
     },
+    "main": "src/index.js",
     "devDependencies": {},
     "dependencies": {
         "raspi-i2c": "6.2.1",
