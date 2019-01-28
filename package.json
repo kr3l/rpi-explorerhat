@@ -1,0 +1,15 @@
+{
+    "name": "rpi-explorerhat",
+    "version":"0.0.1",
+    "author": "Karel Braeckman",
+    "repository": {
+        "type": "git",
+        "url": "https://bitbucket.org/karelbraeckman/rpi-explorerhat.git"
+    },
+    "devDependencies": {},
+    "dependencies": {
+        "raspi-i2c": "6.2.1",
+        "raspi-kit-ads1x15": "1.0.0",
+        "pigpio": "^1.2.1"
+    }
+}
