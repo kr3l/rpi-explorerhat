@@ -88,7 +88,4 @@ class Motor {
     }
 }
 
-module.exports = {
-    one: new Motor(19, 20),
-    two: new Motor(21, 26)
-};
+module.exports = Motor;

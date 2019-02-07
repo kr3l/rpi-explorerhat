@@ -1,15 +1,14 @@
 const I2C = require('raspi-i2c').I2C;
 const ADS1x15 = require('raspi-kit-ads1x15');
 
-const i2c = new I2C();
-
 class Analog {
-    constructor(channel) {
+    constructor(channel, options) {
+        options = options || {};
         this.channel = channel;
 
 
         // Init Raspi-I2c
-        this.i2c = i2c;
+        this.i2c = options.i2c || new I2C();
 
         // Init the ADC
         this.adc = new ADS1x15({
@@ -35,9 +34,4 @@ class Analog {
     }
 }
 
-module.exports = {
-    one: new Analog(ADS1x15.channel.CHANNEL_3),
-    two: new Analog(ADS1x15.channel.CHANNEL_2),
-    three: new Analog(ADS1x15.channel.CHANNEL_1),
-    four: new Analog(ADS1x15.channel.CHANNEL_0)
-};
+module.exports = Analog;
