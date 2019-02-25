@@ -4,7 +4,8 @@ const Analog = require('./analog');
 const Motor = require('./motor');
 
 class Explorer {
-    constructor(options) {
+    constructor(theOptions) {
+        const options = theOptions || {};
         this.i2c = options.i2c || new I2C();
         this.analog = {
             one: new Analog(ADS1x15.channel.CHANNEL_3, { i2c: this.i2c }),
