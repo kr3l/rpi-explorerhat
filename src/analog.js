@@ -28,7 +28,7 @@ class Analog {
     read(callback) {
 
 // Get a single-ended reading from channel-0 and display the results
-        this.adc.readChannel(ADS1x15.channel.CHANNEL_3, (err, value, volts) => {
+        this.adc.readChannel(this.channel, (err, value, volts) => {
             callback(err, volts, value);
         });
     }
